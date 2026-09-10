@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap');
+
+/* Canvas fixado cobrindo 100% da viewport continuamente */
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Animação Contínua de Gradiente/Brilho Fluido no Nome */
+.animated-title {
+  background: linear-gradient(
+    90deg, 
+    #0f172a 0%, 
+    #0284c7 25%, 
+    #38bdf8 50%, 
+    #0284c7 75%, 
+    #0f172a 100%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmerTitle 4s linear infinite;
+}
+
+@keyframes shimmerTitle {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
